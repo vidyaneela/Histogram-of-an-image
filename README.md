@@ -27,11 +27,12 @@ The Histogram of gray scale image and color image is shown.
  Register Number:212221230120
 
 ## Write your code to find the histogram of gray scale image and color image channels.
-
+```
 import cv2
 import matplotlib.pyplot as plt
-
+```
 # Histogram for Grayscale image
+```
 grayscale_img=cv2.imread("black.jpg")
 plt.imshow(grayscale_img)
 plt.show()
@@ -42,9 +43,9 @@ color_img=cv2.imread("color.jpeg")
 hist1=cv2.calcHist([color_img],[1],None,[256],[0,255])
 plt.imshow(color_img)
 plt.show()
-
+```
 ## Display the histogram of gray scale image and any one channel histogram from color image
-
+```
 #Plotting histogram for Grayscale image
 plt.figure()
 plt.title("Histogram")
@@ -60,10 +61,10 @@ plt.xlabel("BGR intensity value")
 plt.ylabel("Pixel Count")
 plt.stem(hist1)
 plt.show()
-
+```
 
 # Write the code to perform histogram equalization of the image. 
-
+```
 #Histogram equalization for Grayscale image
 import cv2
 Gray_image=cv2.imread('black.jpg',0)
@@ -77,7 +78,7 @@ cv2.imshow('EQUALIZED IMAGE',equalize)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-
+```
 ## Output:
 ### Input Grayscale Image and Color Image
 ![image](https://user-images.githubusercontent.com/94169318/231339001-91b073bd-6070-4df3-a6c0-e291c40269cb.png)
